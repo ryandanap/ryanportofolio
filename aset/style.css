@@ -1,0 +1,451 @@
+/* navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 7%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 1px 22px 0 rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+  }  
+
+  .navbar .navbar-logo {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #000;
+    font-style: italic;
+    text-decoration: none;
+  }
+  
+  .navbar .navbar-logo span {
+    color: #7a7a7a;
+    font-size: 1.5rem;
+  }
+
+.navbar .navbar-navi a {
+    color: #000;
+    display: inline-block;
+    font-size: 1rem;
+    margin: 0 1rem;
+    text-decoration: none;
+  }
+  
+  .navbar .navbar-navi a:hover {
+    color: #7a7a7a;
+  }
+  
+  .navbar .navbar-navi a::after {
+    content: "";
+    display: block;
+    padding-bottom: 0.5rem;
+    transform: scaleX(0);
+    transition: 0.2s linear;
+  }
+  
+  .navbar .navbar-navi a:hover::after {
+    transform: scaleX(0.5);
+  }
+  
+  .navbar .navbar-extra a {
+    color: #000;
+    margin: 0 0.5rem;
+  }
+  
+  .navbar .navbar-extra a:hover {
+    color: #000;
+  }
+  
+  #hamburger-menu {
+    display: none;
+  }
+
+  .navbar-extra  i {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .navbar-lang {
+    display: flex;
+    align-items: center;
+  }
+  .nav-lang-content {
+    display: flex;
+    gap: 5px;
+  }
+
+
+
+  .btn-start {
+    display: flex;
+    position: absolute;
+    padding-bottom: 3rem;
+    width: 100%;
+    height: 30vh;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Transparansi jika diperlukan */
+    z-index: 10; /* Awalnya di depan */
+    transition: z-index 0.3s, opacity 0.3s; /* Animasi opsional */
+  }
+  
+
+
+/* HOME */
+#home {
+    padding-top: 7.5rem;
+}
+
+#home,
+#tentang,
+#layanan,
+#project,
+#kontak {
+    margin-bottom: 5rem;
+}
+
+
+#home img {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+
+#home img:hover {
+    transform: scale(1.02); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.home-content h1 {
+    font-size: 3.5rem;
+}
+
+.home-content p {
+    font-size: 1.3rem;
+}
+
+.link-social {
+  margin-left: 6rem;
+  margin-top: 6rem;
+  gap: 2.4rem;
+}
+
+.link-social a {
+    text-decoration: none;
+    color: #00096f;
+}
+
+.link-social a:hover {
+    color: #000;
+}
+
+
+/* SCROLL ANIMATION */
+.scroll-element {
+    transform: translateY(30%);
+    opacity: 0;
+    transition: all 1.0s;
+}
+
+.scroll-element.visible {
+    transform: translateY(0%);
+    opacity: 1;
+}
+.scroll-element-1 {
+  transform: translateY(30%);
+  opacity: 0;
+  transition: all 1.0s;
+}
+
+.scroll-element-1.visible {
+  transform: translateY(0%);
+  opacity: 1;
+}
+
+.row {
+  background-color: #ffffff;
+}
+
+
+/* ABOUT */
+.tentang h3 {
+    font-size: 2.5rem;
+}
+
+.tentang p {
+    font-size: 1.2rem;
+}
+
+.tentang-img {
+    border-radius: 100px 100px 20px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.tentang-img:hover {
+    transform: scale(1.02); /* Efek zoom saat hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.tentang-icon,
+.tentang-cv {
+  font-size: 20px;
+}
+
+
+
+/* SKILL */
+.box-skill {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.box-skill:hover {
+    transform: scale(1.02); /* Efek zoom saat hover */
+    box-shadow: 0 6px 12px rgba(0, 51, 255, 0.442);
+}
+
+
+/* PROJECT */
+.box-project {
+    position: relative;
+    padding: 1rem;
+    border-radius: 8px;
+    overflow: hidden; /* Agar gambar tidak keluar dari box */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.box-project h3 {
+    margin-bottom: 15px;
+}
+
+.box-project h4 {
+    font-size: small;
+    font-weight: 10px;
+    color: #00000062;
+}
+
+.box-project:hover {
+    transform: scale(1.02); /* Efek zoom saat hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.box-project img {
+    width: 100%; /* Gambar menyesuaikan lebar box */
+    height: auto; /* Menjaga aspek rasio gambar */
+    border-radius: 6px; /* Opsional: untuk menyelaraskan dengan box */
+    display: block; /* Menghilangkan spasi ekstra di bawah gambar */
+    object-fit: cover; /* Jika gambar perlu di-crop untuk mengisi box */
+}
+
+.btn-project:hover {
+    background-color: #000;
+    border: 1px solid #000;
+}
+
+
+/* CONTACT */
+#kontak {
+    padding-top: 1rem;
+}
+
+#kontak .row {
+  display: grid;
+  padding-top: 6.4rem;
+}
+
+.text-kontak {
+    position: absolute;
+    left: 60px;
+    border: 70px solid #000;
+    bottom: 330px;
+}
+
+.konten-kontak {
+    width: 350px;
+    height: 300px;
+    padding: 3rem;
+}
+
+.title-kontak {
+    color: #ffffff;
+    width: 300px;
+}
+
+
+/* FOOTER */
+.footer {
+    background-color: #000;
+}
+
+.container-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 5rem;
+}
+
+.link-footer {
+    display: flex;
+    gap: 1.4rem;
+}
+
+.text-footer {
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.text-footer:hover {
+    color: #bebebe;
+}
+
+.footer-copy {
+    color:#ffffff;
+    font-size: .9rem;
+}
+
+.footer-copy a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.footer-copy a:hover {
+    color: #bebebe;
+}
+
+
+
+/* untuk device yang lebih kecil */
+@media (max-width: 768px) {
+    html {
+      font-size: 71.9%;
+    }
+  
+    #hamburger-menu {
+      display: inline-block;
+      size: 2rem;
+    }
+  
+    .navbar .navbar-navi {
+      position: absolute;
+      top: 100%;
+      right: -100%;
+      background-color: rgba(255, 255, 255, 0.932);
+      width: 18rem;
+      height: 100vh;
+      transition: 0.3s;
+    }
+  
+    .navbar .navbar-navi.active {
+      right: 0;
+    }
+  
+    .navbar .navbar-navi a {
+      color: #000;
+      display: block;
+      margin: 1.5rem;
+      padding: 8px;
+      font-size: 1.5rem;
+    }
+  
+    .navbar .navbar-navi a::after {
+      transform-origin: 0 0;
+    }
+  
+    .navbar .navbar-navi a:hover:after {
+      transform: scaleX(0.3);
+    }
+
+    .navbar-lang {
+      width: 50%;
+      justify-content: end;
+    }
+    .nav-lang-content {
+      display: flex;
+      font-size: 13px;
+      gap: 7px;
+    }
+  
+
+    .scroll-element {
+      transform: translateY(20%);
+      opacity: 0;
+      transition: all 1.0s;
+    }
+    
+    .scroll-element.visible {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+    
+    .scroll-element-1 {
+      transform: translateY(20%);
+      opacity: 0;
+      transition: all 1.0s;
+    }
+  
+    .scroll-element-1.visible {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  
+
+    .home-content p,
+    .home-content a {
+        padding-left: 1.3rem;
+    }
+
+    .home-content a i {
+      font-size: 1.4rem;
+    }
+    .link-social a i {
+      font-size: 2.3rem;
+    }
+
+    .tentang {
+      padding: 1.3rem;
+    }
+
+    .tentang p,
+    .tentang .cv {
+        padding-right: 1.3rem;
+    }
+
+    .tentang-icon,
+    .tentang-cv {
+      font-size: 15px;
+    }
+
+    #kontak .row {
+      display: grid;
+      padding-top: 5rem;
+    }
+
+    .text-kontak {
+        position: relative;
+        left: 50px;
+        border: 30px solid #000;
+        top: 0px;
+        margin-right: 10rem;
+        margin-bottom: 10rem;
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    .konten-kontak {
+        width: 200px;
+        height: 150px;
+        padding: .5rem;
+    }
+
+    .container-footer {
+        display: grid;
+        justify-content: center;
+        padding: 2rem 5rem;
+        gap: 1rem;
+    }
+}
